@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <!-- Simple Icons CDN for Next.js icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-icons-font@v7/font/simple-icons.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="/global.css">
+    <title>Juan Diego Vives Criollo - Full Stack Developer</title>   
+</head>
+<body class="bg-black text-white min-h-screen overflow-x-hidden">   
+    <nav class="fixed top-0 w-full bg-black/98 backdrop-blur-xl z-50 border-b border-cyan-500/20 shadow-2xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+             
+                <div class="flex items-center space-x-4">
+                    <div class="relative group">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+                        <img src="./assets/img/perfil2.webp" alt="Juan Diego Vives" 
+                             class="relative w-12 h-12 rounded-full object-cover border-2 border-gray-800 group-hover:border-cyan-400 transition-all duration-300">
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                            Juan Diego Vives
+                        </h1>
+                        <p class="text-xs text-gray-400 font-medium">Full Stack Developer</p>
+                    </div>
+                </div>              
+                <div class="hidden md:flex items-center space-x-3">
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=vivescriollojuandiego@gmail.com" target="_blank"
+                       class="w-10 h-10 bg-gradient-to-r from-red-600 to-red-500 rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300 group shadow-lg hover:shadow-red-500/25 cursor-pointer"
+                       title="Enviar Email">
+                        <i class="fab fa-google text-white group-hover:scale-110 transition-transform"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/juan-diego-vives-criollo-245a98306" target="_blank"
+                       class="w-10 h-10 bg-gradient-to-r from-blue-600 to-blue-500 rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300 group shadow-lg hover:shadow-blue-500/25"
+                       title="Ver perfil en LinkedIn">
+                        <i class="fab fa-linkedin-in text-white group-hover:scale-110 transition-transform"></i>
+                    </a>
+                    <a href="https://github.com/JuanDiegoVivesCriollo" target="_blank"
+                       class="w-10 h-10 bg-gradient-to-r from-gray-700 to-gray-600 rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300 group shadow-lg hover:shadow-gray-500/25"
+                       title="Ver repositorios en GitHub">
+                        <i class="fab fa-github text-white group-hover:scale-110 transition-transform"></i>
+                    </a>
+                    <a x-data="{ isMobile: /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) }"
+                       :href="isMobile ? 'whatsapp://send?phone=51947798160&text=Hola%20Juan%20Diego,%20vi%20tu%20portafolio%20y%20me%20interesa%20contactarte' : 'https://web.whatsapp.com/send?phone=51947798160&text=Hola%20Juan%20Diego,%20vi%20tu%20portafolio%20y%20me%20interesa%20contactarte'"
+                       class="w-10 h-10 bg-gradient-to-r from-green-600 to-green-500 rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300 group shadow-lg hover:shadow-green-500/25"
+                       title="Contactar por WhatsApp" target="_blank">
+                        <i class="fab fa-whatsapp text-white group-hover:scale-110 transition-transform"></i>
+                    </a>
+                </div>
+
+            
+                <div class="hidden lg:block">
+                    <div class="flex items-center space-x-2">
+                        <a href="#inicio" class="relative group px-4 py-2 text-gray-300 hover:text-cyan-400 transition-all duration-300 rounded-lg">
+                            <span class="relative z-10 font-medium">Inicio</span>
+                            <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
+                            <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-400 group-hover:w-full transition-all duration-300"></div>
+                        </a>
+                        <a href="#tecnologias" class="relative group px-4 py-2 text-gray-300 hover:text-cyan-400 transition-all duration-300 rounded-lg">
+                            <span class="relative z-10 font-medium">Tecnologías</span>
+                            <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
+                            <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-400 group-hover:w-full transition-all duration-300"></div>
+                        </a>
+                        <a href="#proyectos" class="relative group px-4 py-2 text-gray-300 hover:text-cyan-400 transition-all duration-300 rounded-lg">
+                            <span class="relative z-10 font-medium">Proyectos</span>
+                            <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
+                            <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-400 group-hover:w-full transition-all duration-300"></div>
+                        </a>
+                        <a href="#experiencia" class="relative group px-4 py-2 text-gray-300 hover:text-cyan-400 transition-all duration-300 rounded-lg">
+                            <span class="relative z-10 font-medium">Experiencia</span>
+                            <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
+                            <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-400 group-hover:w-full transition-all duration-300"></div>
+                        </a>
+                        <a href="#sobre-mi" class="relative group px-4 py-2 text-gray-300 hover:text-cyan-400 transition-all duration-300 rounded-lg">
+                            <span class="relative z-10 font-medium">Sobre mí</span>
+                            <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
+                            <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-400 group-hover:w-full transition-all duration-300"></div>
+                        </a>
+                        <a href="#contacto" class="relative group px-6 py-2 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-full text-white font-medium hover:from-cyan-500 hover:to-blue-500 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 border border-cyan-500/50">
+                            <span class="relative z-10">Contacto</span>
+                            <div class="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-400 to-blue-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                        </a>
+                    </div>
+                </div>                
+                <div class="lg:hidden">
+                    <button 
+                        x-data="{ open: false }"
+                        @click="open = !open; $dispatch('toggle-mobile-menu', { isOpen: open })"
+                        class="relative group p-3 rounded-lg bg-gray-900/80 hover:bg-gray-800/80 transition-all duration-300 border border-cyan-500/30"
+                        :class="{ 'bg-gray-800/80 border-cyan-400/50': open }"
+                    >
+                        <div class="w-6 h-6 relative">
+                            <span class="absolute block w-6 h-0.5 bg-cyan-400 transform transition-all duration-300"
+                                  :class="{ 'rotate-45 translate-y-2.5': open, 'translate-y-0': !open }"></span>
+                            <span class="absolute block w-6 h-0.5 bg-cyan-400 transform transition-all duration-300 translate-y-2.5"
+                                  :class="{ 'opacity-0': open, 'opacity-100': !open }"></span>
+                            <span class="absolute block w-6 h-0.5 bg-cyan-400 transform transition-all duration-300 translate-y-5"
+                                  :class="{ '-rotate-45 -translate-y-2.5': open, 'translate-y-5': !open }"></span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+
+        
+            <div class="lg:hidden" 
+                 x-data="{ mobileOpen: false }"
+                 @toggle-mobile-menu.window="mobileOpen = $event.detail.isOpen">
+                
+                <div class="overflow-hidden transition-all duration-300 ease-in-out bg-black/98 backdrop-blur-xl border-t border-cyan-500/20" 
+                     x-show="mobileOpen" 
+                     x-transition:enter="transition ease-out duration-300"
+                     x-transition:enter-start="opacity-0 max-h-0"
+                     x-transition:enter-end="opacity-100 max-h-96"
+                     x-transition:leave="transition ease-in duration-200"
+                     x-transition:leave-start="opacity-100 max-h-96"
+                     x-transition:leave-end="opacity-0 max-h-0">
+                    
+                    <div class="px-4 py-6 space-y-4">
+                        <!-- Enlaces de contacto móvil -->
+                        <div class="flex justify-center space-x-4 mb-6 pb-6 border-b border-cyan-500/20">
+                            <a href="mailto:vivescriollojuandiego@gmail.com" 
+                               class="w-12 h-12 bg-gradient-to-r from-red-600 to-red-500 rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-red-500/25">
+                                <i class="fab fa-google text-white text-lg"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/juan-diego-vives-criollo-245a98306" target="_blank"
+                               class="w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-500 rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-blue-500/25">
+                                <i class="fab fa-linkedin-in text-white text-lg"></i>
+                            </a>
+                            <a href="https://github.com/JuanDiegoVivesCriollo" target="_blank"
+                               class="w-12 h-12 bg-gradient-to-r from-gray-700 to-gray-600 rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-gray-500/25">
+                                <i class="fab fa-github text-white text-lg"></i>
+                            </a>
+                            <a x-data="{ isMobile: /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) }"
+                               :href="isMobile ? 'whatsapp://send?phone=51947798160&text=Hola%20Juan%20Diego,%20vi%20tu%20portafolio%20y%20me%20interesa%20contactarte' : 'https://web.whatsapp.com/send?phone=51947798160&text=Hola%20Juan%20Diego,%20vi%20tu%20portafolio%20y%20me%20interesa%20contactarte'"
+                               class="w-12 h-12 bg-gradient-to-r from-green-600 to-green-500 rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-green-500/25">
+                                <i class="fab fa-whatsapp text-white text-lg"></i>
+                            </a>
+                        </div>
+                        
+                        <div class="space-y-2">
+                            <a href="#inicio" 
+                               @click="mobileOpen = false; $dispatch('toggle-mobile-menu', { isOpen: false })" 
+                               class="flex items-center px-4 py-3 text-gray-300 hover:text-cyan-400 hover:bg-gray-900/50 rounded-xl transition-all duration-300 group">
+                                <i class="fas fa-home mr-3 text-cyan-400"></i>
+                                <span class="font-medium">Inicio</span>
+                                <i class="fas fa-chevron-right ml-auto opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-1 transition-all duration-300"></i>
+                            </a>
+                            
+                            <a href="#tecnologias" 
+                               @click="mobileOpen = false; $dispatch('toggle-mobile-menu', { isOpen: false })" 
+                               class="flex items-center px-4 py-3 text-gray-300 hover:text-cyan-400 hover:bg-gray-900/50 rounded-xl transition-all duration-300 group">
+                                <i class="fas fa-code mr-3 text-cyan-400"></i>
+                                <span class="font-medium">Tecnologías</span>
+                                <i class="fas fa-chevron-right ml-auto opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-1 transition-all duration-300"></i>
+                            </a>
+                            
+                            <a href="#proyectos" 
+                               @click="mobileOpen = false; $dispatch('toggle-mobile-menu', { isOpen: false })" 
+                               class="flex items-center px-4 py-3 text-gray-300 hover:text-cyan-400 hover:bg-gray-900/50 rounded-xl transition-all duration-300 group">
+                                <i class="fas fa-laptop-code mr-3 text-cyan-400"></i>
+                                <span class="font-medium">Proyectos</span>
+                                <i class="fas fa-chevron-right ml-auto opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-1 transition-all duration-300"></i>
+                            </a>
+                            
+                            <a href="#experiencia" 
+                               @click="mobileOpen = false; $dispatch('toggle-mobile-menu', { isOpen: false })" 
+                               class="flex items-center px-4 py-3 text-gray-300 hover:text-cyan-400 hover:bg-gray-900/50 rounded-xl transition-all duration-300 group">
+                                <i class="fas fa-briefcase mr-3 text-cyan-400"></i>
+                                <span class="font-medium">Experiencia</span>
+                                <i class="fas fa-chevron-right ml-auto opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-1 transition-all duration-300"></i>
+                            </a>
+                            
+                            <a href="#sobre-mi" 
+                               @click="mobileOpen = false; $dispatch('toggle-mobile-menu', { isOpen: false })" 
+                               class="flex items-center px-4 py-3 text-gray-300 hover:text-cyan-400 hover:bg-gray-900/50 rounded-xl transition-all duration-300 group">
+                                <i class="fas fa-user mr-3 text-cyan-400"></i>
+                                <span class="font-medium">Sobre mí</span>
+                                <i class="fas fa-chevron-right ml-auto opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-1 transition-all duration-300"></i>
+                            </a>
+                            
+                            <a href="#contacto" 
+                               @click="mobileOpen = false; $dispatch('toggle-mobile-menu', { isOpen: false })" 
+                               class="flex items-center px-4 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 text-white rounded-xl font-medium text-center transition-all duration-300 hover:from-cyan-500 hover:to-blue-500 shadow-lg hover:shadow-cyan-500/25 mt-4">
+                                <i class="fas fa-envelope mr-3"></i>
+                                <span class="flex-1">Contacto</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </a>
+                        </div>
+                        
+                     
+                        <div class="pt-6 mt-6 border-t border-cyan-500/20 text-center">
+                            <p class="text-gray-400 text-sm">
+                                <i class="fas fa-map-marker-alt mr-2 text-cyan-400"></i>
+                                Lima, Perú
+                            </p>
+                            <p class="text-gray-400 text-xs mt-2">
+                                Disponible para nuevos proyectos
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>  
+    <section id="inicio" class="relative min-h-screen flex items-center justify-center px-4 pt-20 bg-gradient-to-b from-black to-gray-900">
+        
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_0%,_black_100%)]"></div>
+            <div class="absolute top-0 left-0 w-full h-full opacity-20">
+                <div class="absolute w-px h-full bg-gradient-to-b from-transparent via-cyan-500 to-transparent opacity-50" style="left: 10%; animation-delay: 0s;"></div>
+                <div class="absolute w-px h-full bg-gradient-to-b from-transparent via-blue-500 to-transparent opacity-50" style="left: 30%; animation-delay: 1s;"></div>
+                <div class="absolute w-px h-full bg-gradient-to-b from-transparent via-cyan-400 to-transparent opacity-50" style="left: 60%; animation-delay: 2s;"></div>
+                <div class="absolute w-px h-full bg-gradient-to-b from-transparent via-blue-400 to-transparent opacity-50" style="left: 80%; animation-delay: 0.5s;"></div>
+            </div>
+           
+            <div class="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:100px_100px]"></div>
+        </div>
+        
+        <div class="text-center max-w-4xl mx-auto relative z-10 px-4">
+            <div class="mb-6 sm:mb-8">
+                <div class="w-32 h-32 sm:w-40 sm:h-40 md:w-44 md:h-44 mx-auto mb-4 sm:mb-6 relative group">
+                    <div class="absolute -inset-4 sm:-inset-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-400 rounded-full blur-2xl opacity-60 group-hover:opacity-80 transition duration-1000 animate-pulse"></div>
+                    <div class="absolute -inset-1 sm:-inset-2 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full blur opacity-75"></div>
+                    <img src="./assets/img/perfil2.webp" alt="Juan Diego Vives Criollo" 
+                         class="relative w-full h-full rounded-full object-cover border-2 sm:border-4 border-cyan-400/50 shadow-2xl shadow-cyan-500/25">                    <!-- Tech icons floating around - ocultos en móvil muy pequeño -->
+                    <div class="absolute -top-3 sm:-top-4 -right-3 sm:-right-4 w-6 sm:w-8 h-6 sm:h-8 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full hidden sm:flex items-center justify-center float" style="animation-delay: 0s;">
+                        <i class="fab fa-react text-white text-xs sm:text-sm"></i>
+                    </div>
+                    <div class="absolute -bottom-3 sm:-bottom-4 -left-3 sm:-left-4 w-6 sm:w-8 h-6 sm:h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full hidden sm:flex items-center justify-center float" style="animation-delay: 1s;">
+                        <i class="fab fa-js-square text-white text-xs sm:text-sm"></i>
+                    </div>
+                    <div class="absolute top-4 sm:top-6 -left-4 sm:-left-6 w-6 sm:w-8 h-6 sm:h-8 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full hidden sm:flex items-center justify-center float" style="animation-delay: 2s;">
+                        <i class="fab fa-node-js text-white text-xs sm:text-sm"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent leading-tight">
+                Juan Diego Vives Criollo
+            </h1>
+            
+            <div class="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-6 sm:mb-8 h-16 sm:h-20 flex items-center justify-center" x-data="typewriter()" x-init="start()">
+                <span class="text-cyan-300 font-mono border-r-2 border-cyan-400 pr-2 text-center" x-text="displayedText"></span>
+            </div>
+            
+            <p class="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 text-gray-400 max-w-3xl mx-auto leading-relaxed">
+                <span class="text-cyan-400 font-semibold">Aspiring Full Stack Web Developer</span> | 
+                <span class="text-blue-400">Estudiante de Ingeniería de Software</span> | 
+                <span class="text-gray-300">20 años</span> | 
+                <span class="text-cyan-300">Lima, Perú 🇵🇪</span>
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
+                <a href="#tecnologias" class="group relative px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-full font-semibold text-white overflow-hidden transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-400/40 w-full sm:w-auto">
+                    <span class="relative z-10 text-sm sm:text-base">🚀 Ver Tecnologías</span>
+                    <div class="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
+                <a href="#proyectos" class="group relative px-6 sm:px-8 py-3 sm:py-4 border-2 border-cyan-400 rounded-full font-semibold text-cyan-400 hover:text-black hover:bg-cyan-400 transition-all duration-300 transform hover:scale-105 w-full sm:w-auto">
+                    <span class="relative z-10 text-sm sm:text-base">💼 Ver Proyectos</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section id="sobre-mi" class="py-12 sm:py-16 md:py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 md:mb-16 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                Sobre mí
+            </h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+                <div class="space-y-4 sm:space-y-6 order-2 lg:order-1">
+                    <p class="text-base sm:text-lg text-gray-300 leading-relaxed">
+                        Soy estudiante de <span class="text-blue-400 font-semibold">Ingeniería de Software</span> en los últimos ciclos de la UTP, 
+                        apasionado del mundo de la programación en general. Me destaco por mi enfoque proactivo, 
+                        pensamiento analítico y capacidad para integrarme en equipos ágiles.
+                    </p>
+                    
+                    <p class="text-base sm:text-lg text-gray-300 leading-relaxed">
+                        Actualmente estoy consolidando mi perfil como <span class="text-purple-400 font-semibold">desarrollador full stack</span>, 
+                        aprendiendo tecnologías modernas y aplicando metodologías ágiles como Scrum.
+                    </p>
+                    
+                    <p class="text-base sm:text-lg text-gray-300 leading-relaxed">
+                        Me encuentro en constante aprendizaje y fortaleciendo mi nivel de inglés (actualmente entre A2 y B1), 
+                        con el objetivo de estar preparado para retos técnicos más complejos y entornos internacionales.
+                    </p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-blue-900/30 to-purple-900/30 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-white/10 order-1 lg:order-2">
+                    <h3 class="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-blue-400">Información Personal</h3>
+                    <div class="space-y-3 sm:space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <span class="w-2 h-2 bg-blue-400 rounded-full flex-shrink-0"></span>
+                            <span class="text-sm sm:text-base"><strong>Edad:</strong> 20 años</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="w-2 h-2 bg-purple-400 rounded-full flex-shrink-0"></span>
+                            <span class="text-sm sm:text-base"><strong>Ubicación:</strong> San Juan de Lurigancho, Lima, Perú</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="w-2 h-2 bg-pink-400 rounded-full flex-shrink-0"></span>
+                            <span class="text-sm sm:text-base"><strong>Universidad:</strong> UTP - Ingeniería de Software</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="w-2 h-2 bg-green-400 rounded-full flex-shrink-0"></span>
+                            <span class="text-sm sm:text-base"><strong>Inglés:</strong> A2-B1 (En mejora continua)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>    
+    <section id="tecnologias" class="py-12 sm:py-16 md:py-20 px-4 bg-black relative">
+       
+        <div class="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.05)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
+        
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                    💻 Stack Tecnológico
+                </h2>
+                <p class="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto px-4">
+                    Tecnologías y herramientas que domino para crear aplicaciones web modernas y escalables
+                </p>
+            </div>
+            
+            <!-- Frontend Technologies -->
+            <div class="mb-12 md:mb-16">
+                <h3 class="text-2xl sm:text-3xl font-bold text-center mb-6 md:mb-8 text-cyan-400">Frontend Development</h3>
+                <div class="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6">
+                    <div class="group">
+                        <div class="bg-gray-900/80 hover:bg-gray-800/80 p-4 sm:p-6 rounded-xl border border-gray-800 hover:border-orange-500/50 transition-all transform hover:scale-105 text-center backdrop-blur-sm">
+                            <i class="devicon-html5-plain colored text-3xl sm:text-4xl mb-2 sm:mb-3 group-hover:scale-110 transition-transform"></i>
+                            <h3 class="font-semibold text-orange-400 text-sm sm:text-base">HTML5</h3>
+                            <div class="w-full bg-gray-700 rounded-full h-1.5 sm:h-2 mt-2">
+                                <div class="bg-orange-500 h-1.5 sm:h-2 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="group">
+                        <div class="bg-gray-900/80 hover:bg-gray-800/80 p-4 sm:p-6 rounded-xl border border-gray-800 hover:border-blue-500/50 transition-all transform hover:scale-105 text-center backdrop-blur-sm">
+                            <i class="devicon-css3-plain colored text-3xl sm:text-4xl mb-2 sm:mb-3 group-hover:scale-110 transition-transform"></i>
+                            <h3 class="font-semibold text-blue-400 text-sm sm:text-base">CSS3</h3>
+                            <div class="w-full bg-gray-700 rounded-full h-1.5 sm:h-2 mt-2">
+                                <div class="bg-blue-500 h-1.5 sm:h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="group">
+                        <div class="bg-gray-900/80 hover:bg-gray-800/80 p-4 sm:p-6 rounded-xl border border-gray-800 hover:border-yellow-500/50 transition-all transform hover:scale-105 text-center backdrop-blur-sm">
+                            <i class="devicon-javascript-plain colored text-3xl sm:text-4xl mb-2 sm:mb-3 group-hover:scale-110 transition-transform"></i>
+                            <h3 class="font-semibold text-yellow-400 text-sm sm:text-base">JavaScript</h3>
+                            <div class="w-full bg-gray-700 rounded-full h-1.5 sm:h-2 mt-2">
+                                <div class="bg-yellow-500 h-1.5 sm:h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="group">
+                        <div class="bg-gray-900/80 hover:bg-gray-800/80 p-4 sm:p-6 rounded-xl border border-gray-800 hover:border-cyan-500/50 transition-all transform hover:scale-105 text-center backdrop-blur-sm">
+                            <i class="devicon-react-original colored text-3xl sm:text-4xl mb-2 sm:mb-3 group-hover:scale-110 transition-transform"></i>
+                            <h3 class="font-semibold text-cyan-400 text-sm sm:text-base">React</h3>
+                            <div class="w-full bg-gray-700 rounded-full h-1.5 sm:h-2 mt-2">
+                                <div class="bg-cyan-500 h-1.5 sm:h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="group">
+                        <div class="bg-gray-900/80 hover:bg-gray-800/80 p-4 sm:p-6 rounded-xl border border-gray-800 hover:border-gray-500/50 transition-all transform hover:scale-105 text-center backdrop-blur-sm">
+                            <i class="si si-nextdotjs text-white text-3xl sm:text-4xl mb-2 sm:mb-3 group-hover:scale-110 transition-transform"></i>
+                            <h3 class="font-semibold text-gray-300 text-sm sm:text-base">Next.js</h3>
+                            <div class="w-full bg-gray-700 rounded-full h-1.5 sm:h-2 mt-2">
+                                <div class="bg-gray-400 h-1.5 sm:h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="group">
+                        <div class="bg-gray-900/80 hover:bg-gray-800/80 p-4 sm:p-6 rounded-xl border border-gray-800 hover:border-red-500/50 transition-all transform hover:scale-105 text-center backdrop-blur-sm">
+                            <i class="devicon-angularjs-plain colored text-3xl sm:text-4xl mb-2 sm:mb-3 group-hover:scale-110 transition-transform"></i>
+                            <h3 class="font-semibold text-red-400 text-sm sm:text-base">Angular</h3>
+                            <div class="w-full bg-gray-700 rounded-full h-1.5 sm:h-2 mt-2">
+                                <div class="bg-red-500 h-1.5 sm:h-2 rounded-full" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-12 md:mb-16">
+                <h3 class="text-2xl sm:text-3xl font-bold text-center mb-6 md:mb-8 text-blue-400">Backend Development</h3>
+                <div class="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6">
+                    <div class="group">
+                        <div class="bg-gray-900/80 hover:bg-gray-800/80 p-4 sm:p-6 rounded-xl border border-gray-800 hover:border-purple-500/50 transition-all transform hover:scale-105 text-center backdrop-blur-sm">
+                            <i class="devicon-php-plain colored text-3xl sm:text-4xl mb-2 sm:mb-3 group-hover:scale-110 transition-transform"></i>
+                            <h3 class="font-semibold text-purple-400 text-sm sm:text-base">PHP</h3>
+                            <div class="w-full bg-gray-700 rounded-full h-1.5 sm:h-2 mt-2">
+                                <div class="bg-purple-500 h-1.5 sm:h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="group">
+                        <div class="bg-gray-900/80 hover:bg-gray-800/80 p-4 sm:p-6 rounded-xl border border-gray-800 hover:border-red-500/50 transition-all transform hover:scale-105 text-center backdrop-blur-sm">
+                            <i class="devicon-laravel-plain colored text-3xl sm:text-4xl mb-2 sm:mb-3 group-hover:scale-110 transition-transform"></i>
+                            <h3 class="font-semibold text-red-400 text-sm sm:text-base">Laravel</h3>
+                            <div class="w-full bg-gray-700 rounded-full h-1.5 sm:h-2 mt-2">
+                                <div class="bg-red-500 h-1.5 sm:h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="group">
+                        <div class="bg-gray-900/80 hover:bg-gray-800/80 p-4 sm:p-6 rounded-xl border border-gray-800 hover:border-green-500/50 transition-all transform hover:scale-105 text-center backdrop-blur-sm">
+                            <i class="devicon-nodejs-plain colored text-3xl sm:text-4xl mb-2 sm:mb-3 group-hover:scale-110 transition-transform"></i>
+                            <h3 class="font-semibold text-green-400 text-sm sm:text-base">Node.js</h3>
+                            <div class="w-full bg-gray-700 rounded-full h-1.5 sm:h-2 mt-2">
+                                <div class="bg-green-500 h-1.5 sm:h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="group">
+                        <div class="bg-gray-900/80 hover:bg-gray-800/80 p-4 sm:p-6 rounded-xl border border-gray-800 hover:border-gray-500/50 transition-all transform hover:scale-105 text-center backdrop-blur-sm">
+                            <i class="devicon-express-original text-white text-3xl sm:text-4xl mb-2 sm:mb-3 group-hover:scale-110 transition-transform"></i>
+                            <h3 class="font-semibold text-gray-300 text-sm sm:text-base">Express</h3>
+                            <div class="w-full bg-gray-700 rounded-full h-1.5 sm:h-2 mt-2">
+                                <div class="bg-gray-400 h-1.5 sm:h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="group">
+                        <div class="bg-gray-900/80 hover:bg-gray-800/80 p-4 sm:p-6 rounded-xl border border-gray-800 hover:border-orange-500/50 transition-all transform hover:scale-105 text-center backdrop-blur-sm">
+                            <i class="devicon-java-plain colored text-3xl sm:text-4xl mb-2 sm:mb-3 group-hover:scale-110 transition-transform"></i>
+                            <h3 class="font-semibold text-orange-400 text-sm sm:text-base">Java</h3>
+                            <div class="w-full bg-gray-700 rounded-full h-1.5 sm:h-2 mt-2">
+                                <div class="bg-orange-500 h-1.5 sm:h-2 rounded-full" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        
+            <div class="mb-8 md:mb-12">
+                <h3 class="text-2xl sm:text-3xl font-bold text-center mb-6 md:mb-8 text-green-400">Tools & Frameworks</h3>
+                <div class="flex flex-wrap justify-center gap-3 md:gap-4">
+                    <span class="px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-cyan-900/50 to-blue-900/50 rounded-full border border-cyan-500/30 text-cyan-400 font-medium backdrop-blur-sm text-sm sm:text-base">
+                        <i class="devicon-tailwindcss-plain colored mr-2"></i>Tailwind CSS
+                    </span>
+                    <span class="px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-purple-900/50 to-purple-800/50 rounded-full border border-purple-500/30 text-purple-400 font-medium backdrop-blur-sm text-sm sm:text-base">
+                        <i class="devicon-bootstrap-plain colored mr-2"></i>Bootstrap
+                    </span>
+                    <span class="px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-orange-900/50 to-red-900/50 rounded-full border border-orange-500/30 text-orange-400 font-medium backdrop-blur-sm text-sm sm:text-base">
+                        <i class="devicon-git-plain colored mr-2"></i>Git
+                    </span>
+                    <span class="px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-gray-900/50 to-gray-800/50 rounded-full border border-gray-500/30 text-gray-400 font-medium backdrop-blur-sm text-sm sm:text-base">
+                        <i class="devicon-github-original colored mr-2"></i>GitHub
+                    </span>
+                    <span class="px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-green-900/50 to-emerald-900/50 rounded-full border border-green-500/30 text-green-400 font-medium backdrop-blur-sm text-sm sm:text-base">
+                        <i class="fas fa-code mr-2"></i>APIs RESTful
+                    </span>
+                    <span class="px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-yellow-900/50 to-amber-900/50 rounded-full border border-yellow-500/30 text-yellow-400 font-medium backdrop-blur-sm text-sm sm:text-base">
+                        <i class="fas fa-users mr-2"></i>Scrum
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="experiencia" class="py-20 px-4 bg-black relative">
+        <div class="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.03)_1px,transparent_1px)] bg-[size:150px_150px]"></div>
+        <div class="max-w-6xl mx-auto relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                    💼 Experiencia Profesional
+                </h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    Mi trayectoria profesional en el desarrollo web y tecnología
+                </p>
+            </div>
+            <div class="space-y-8">
+                <!-- Trabajo Actual -->
+                <div class="group bg-black/80 backdrop-blur-sm rounded-2xl p-8 border border-gray-800 hover:border-cyan-500/50 transition-all transform hover:scale-[1.02] shadow-xl hover:shadow-cyan-500/20">
+                    <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-6 gap-4">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-16 h-16 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-laptop-code text-white text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-cyan-400">Practicante de Desarrollo Web</h3>
+                                <p class="text-xl text-blue-400 font-semibold">NeonHouseled SAC</p>
+                                <p class="text-gray-400 flex items-center mt-1">
+                                    <i class="fas fa-map-marker-alt mr-2"></i>
+                                    Lima, Perú • Remoto
+                                </p>
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <span class="px-4 py-2 bg-green-900/50 text-green-400 rounded-full text-sm border border-green-500/30 font-semibold">
+                                <i class="fas fa-circle text-green-400 text-xs mr-1"></i>ACTUAL
+                            </span>
+                            <p class="text-gray-500 text-sm mt-2">Jun. 2025 - Actualidad</p>
+                        </div>
+                    </div>
+                    <div class="border-l-4 border-cyan-500/50 pl-6 ml-8">
+                        <p class="text-gray-300 leading-relaxed mb-4">
+                            Practicante de desarrollo web para mejoras de diseño y lógica de la página ContigoVoy de la empresa.
+                            Enfocado en optimización de UX/UI y desarrollo de funcionalidades nuevas.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-purple-900/50 text-purple-400 rounded-full text-sm">PHP</span>
+                            <span class="px-3 py-1 bg-red-900/50 text-red-400 rounded-full text-sm">Laravel</span>
+                            <span class="px-3 py-1 bg-blue-900/50 text-blue-400 rounded-full text-sm">Frontend</span>
+                            <span class="px-3 py-1 bg-green-900/50 text-green-400 rounded-full text-sm">UX/UI</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Freelance -->
+                <div class="group bg-black/80 backdrop-blur-sm rounded-2xl p-8 border border-gray-800 hover:border-green-500/50 transition-all transform hover:scale-[1.02] shadow-xl hover:shadow-green-500/20">
+                    <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-6 gap-4">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-16 h-16 bg-gradient-to-r from-green-600 to-emerald-600 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-code text-white text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-green-400">Desarrollo Web Full Stack</h3>
+                                <p class="text-xl text-blue-400 font-semibold">VSP Tours</p>
+                                <p class="text-gray-400 flex items-center mt-1">
+                                    <i class="fas fa-globe mr-2"></i>
+                                    Remoto • Freelance
+                                </p>
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <span class="px-4 py-2 bg-blue-900/50 text-blue-400 rounded-full text-sm border border-blue-500/30 font-semibold">
+                                FREELANCE
+                            </span>
+                            <p class="text-gray-500 text-sm mt-2">Nov. 2024 - Jun. 2025</p>
+                        </div>
+                    </div>
+                    <div class="border-l-4 border-green-500/50 pl-6 ml-8">
+                        <p class="text-gray-300 leading-relaxed mb-4">
+                            Encargado del desarrollo completo de la página web de la empresa VSP Tours. 
+                            Desarrollo full stack incluyendo diseño, funcionalidades, optimización SEO y mantenimiento.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-yellow-900/50 text-yellow-400 rounded-full text-sm">JavaScript</span>
+                            <span class="px-3 py-1 bg-orange-900/50 text-orange-400 rounded-full text-sm">HTML5</span>
+                            <span class="px-3 py-1 bg-blue-900/50 text-blue-400 rounded-full text-sm">CSS3</span>
+                            <span class="px-3 py-1 bg-green-900/50 text-green-400 rounded-full text-sm">SEO</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>    <!-- Proyectos -->
+    <section id="proyectos" class="py-12 sm:py-16 md:py-20 px-4 bg-gray-900 relative">
+        <div class="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.03)_1px,transparent_1px)] bg-[size:100px_100px]"></div>
+        
+        <div class="max-w-6xl mx-auto relative z-10">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                    🚀 Proyectos Destacados
+                </h2>
+                <p class="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto px-4">
+                    Proyectos reales desarrollados con tecnologías modernas y mejores prácticas
+                </p>
+            </div>            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8">
+              
+                <div class="group bg-black/80 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-800 hover:border-cyan-500/50 transition-all transform hover:scale-105 shadow-xl hover:shadow-cyan-500/20">
+                    <div class="h-40 sm:h-48 relative overflow-hidden">
+                        <img src="./assets/img/ContigoVoy.webp" 
+                             alt="ContigoVoy Platform" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                        <div class="absolute top-3 sm:top-4 right-3 sm:right-4 bg-green-500 text-xs px-2 py-1 rounded-full text-white font-semibold">ACTUAL</div>
+                    </div>
+                    <div class="p-4 sm:p-6">
+                        <h3 class="text-lg sm:text-xl font-bold mb-2 text-cyan-400">Contigo Voy</h3>
+                        <p class="text-gray-300 mb-4 text-sm sm:text-base">
+                            Contigo Voy es una página web internacional que brinda citas psicológicas online en diferentes tipos de terapias, con psicólogos capacitados.<br>
+                            Desde mi ingreso, mejoré el diseño de los blogs en el landing page y en el backend para el guardado de blogs, el diseño del login y varias funcionalidades responsivas.<br>
+                            Actualmente sigo encargado de mejoras frontend con Tailwind, aplicando Scrum, usando Git & GitHub y desplegando con Hostinger. Más mejoras en camino.<br>
+                            <a href="https://centropsicologicocontigovoy.com/" target="_blank" class="text-cyan-400 underline hover:text-cyan-300">Ver sitio web</a>
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 sm:px-3 py-1 bg-purple-900/50 text-purple-400 rounded-full text-xs sm:text-sm border border-purple-500/30">PHP</span>
+                            <span class="px-2 sm:px-3 py-1 bg-red-900/50 text-red-400 rounded-full text-xs sm:text-sm border border-red-500/30">Laravel</span>
+                            <span class="px-2 sm:px-3 py-1 bg-blue-900/50 text-blue-400 rounded-full text-xs sm:text-sm border border-blue-500/30">MySQL</span>
+                            <span class="px-2 sm:px-3 py-1 bg-yellow-900/50 text-yellow-400 rounded-full text-xs sm:text-sm border border-yellow-500/30">JavaScript</span>
+                            <span class="px-2 sm:px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-full text-xs sm:text-sm border border-cyan-500/30">CSS3</span>
+                            <span class="px-2 sm:px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-full text-xs sm:text-sm border border-cyan-500/30">Tailwind CSS</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs sm:text-sm text-gray-500">Jun 2025 - Actual</span>
+                            <button onclick="openProjectModal('contigovoy')" 
+                                    class="px-3 py-1 bg-cyan-600 hover:bg-cyan-500 text-white rounded-lg text-xs sm:text-sm transition-all duration-300 flex items-center gap-1">
+                                <i class="fas fa-images"></i>
+                                <span>Ver Galería</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+             
+                <div class="group bg-black/80 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-800 hover:border-green-500/50 transition-all transform hover:scale-105 shadow-xl hover:shadow-green-500/20">
+                    <div class="h-40 sm:h-48 relative overflow-hidden">
+                        <img src="./assets/imgVspTours/vsptourspaginainicial.webp" 
+                             alt="VSP Tours Website" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                        <div class="absolute top-3 sm:top-4 right-3 sm:right-4 bg-blue-500 text-xs px-2 py-1 rounded-full text-white font-semibold">FREELANCE</div>
+                    </div>
+                    <div class="p-4 sm:p-6">
+                        <h3 class="text-lg sm:text-xl font-bold mb-2 text-green-400">VSP Tours Website</h3>
+                        <p class="text-gray-300 mb-4 text-sm sm:text-base">
+                            VSP Tours es una web para una empresa de turismo, desarrollada solo con HTML, CSS y JS. Permite reservas automáticas por WhatsApp, muestra destinos, servicios y flota. No tiene backend ni base de datos.<br>
+                            Me encargué de todo el desarrollo, optimización y despliegue.<br>
+                            <a href="https://vsptours.netlify.app/" target="_blank" class="text-green-400 underline hover:text-green-300">Ver sitio web</a>
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 sm:px-3 py-1 bg-yellow-900/50 text-yellow-400 rounded-full text-xs sm:text-sm border border-yellow-500/30">JavaScript</span>
+                            <span class="px-2 sm:px-3 py-1 bg-orange-900/50 text-orange-400 rounded-full text-xs sm:text-sm border border-orange-500/30">HTML5</span>
+                            <span class="px-2 sm:px-3 py-1 bg-green-900/50 text-green-400 rounded-full text-xs sm:text-sm border border-green-500/30">CSS3</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs sm:text-sm text-gray-500">Nov 2024 - Jun 2025</span>
+                            <button onclick="openProjectModal('vsptours')" 
+                                    class="px-3 py-1 bg-green-600 hover:bg-green-500 text-white rounded-lg text-xs sm:text-sm transition-all duration-300 flex items-center gap-1">
+                                <i class="fas fa-images"></i>
+                                <span>Ver Galería</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+             
+                <div class="group bg-black/80 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-800 hover:border-purple-500/50 transition-all transform hover:scale-105 shadow-xl hover:shadow-purple-500/20 md:col-span-2 xl:col-span-1">
+                    <div class="h-40 sm:h-48 relative overflow-hidden">
+                        <img src="./assets/img/ImagenProtafolio.webp" 
+                             alt="Portfolio Personal" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                        <div class="absolute top-3 sm:top-4 right-3 sm:right-4 bg-purple-500 text-xs px-2 py-1 rounded-full text-white font-semibold">PERSONAL</div>
+                    </div>
+                    <div class="p-4 sm:p-6">
+                        <h3 class="text-lg sm:text-xl font-bold mb-2 text-purple-400">Portfolio Personal</h3>
+                        <p class="text-gray-300 mb-4 text-sm sm:text-base">Portafolio personal desarrollado con tecnologías modernas, diseño responsivo y efectos avanzados de UI/UX.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 sm:px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-full text-xs sm:text-sm border border-cyan-500/30">HTML5</span>
+                            <span class="px-2 sm:px-3 py-1 bg-blue-900/50 text-blue-400 rounded-full text-xs sm:text-sm border border-blue-500/30">Tailwind</span>
+                            <span class="px-2 sm:px-3 py-1 bg-gray-900/50 text-gray-400 rounded-full text-xs sm:text-sm border border-gray-500/30">JavaScript</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs sm:text-sm text-gray-500">Jul 2025</span>
+                            <button onclick="openProjectModal('portfolio')" 
+                                    class="px-3 py-1 bg-purple-600 hover:bg-purple-500 text-white rounded-lg text-xs sm:text-sm transition-all duration-300 flex items-center gap-1">
+                                <i class="fas fa-images"></i>
+                                <span>Ver Galería</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>   
+    <div x-data="projectModal()" 
+         @open-project-modal.window="openProjectModal($event.detail.projectKey)"
+         x-show="isOpen" 
+         x-cloak
+         class="fixed inset-0 z-[100] overflow-y-auto"
+         x-transition:enter="transition ease-out duration-300"
+         x-transition:enter-start="opacity-0"
+         x-transition:enter-end="opacity-100"
+         x-transition:leave="transition ease-in duration-200"
+         x-transition:leave-start="opacity-100"
+         x-transition:leave-end="opacity-0">
+          <!-- Overlay -->
+        <div class="fixed inset-0 bg-black/90 backdrop-blur-sm modal-backdrop" @click="closeModal()"></div>
+        
+  
+        <div class="relative min-h-screen flex items-center justify-center p-4">
+            <div class="relative bg-black/95 backdrop-blur-xl rounded-3xl border border-cyan-500/30 max-w-6xl w-full max-h-[90vh] overflow-hidden shadow-2xl shadow-cyan-500/20"
+                 x-transition:enter="transition ease-out duration-300"
+                 x-transition:enter-start="opacity-0 scale-95"
+                 x-transition:enter-end="opacity-100 scale-100"
+                 x-transition:leave="transition ease-in duration-200"
+                 x-transition:leave-start="opacity-100 scale-100"
+                 x-transition:leave-end="opacity-0 scale-95">
+                
+          
+                <div class="flex items-center justify-between p-6 border-b border-cyan-500/20">
+                    <div>
+                        <h2 class="text-2xl sm:text-3xl font-bold text-white" x-text="currentProject.title"></h2>
+                        <p class="text-cyan-400 font-medium" x-text="currentProject.type"></p>
+                    </div>
+                    <button @click="closeModal()" 
+                            class="w-10 h-10 bg-red-600/20 hover:bg-red-600/40 rounded-full flex items-center justify-center text-red-400 hover:text-white transition-all duration-300">
+                        <i class="fas fa-times text-lg"></i>
+                    </button>
+                </div>
+               
+                <div class="p-6 overflow-y-auto max-h-[calc(90vh-120px)] modal-content">
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                        
+                   
+                        <div class="lg:col-span-2 space-y-4">
+                         
+                            <div class="relative group">                                <img :src="currentProject.images[selectedImageIndex]" 
+                                     :alt="currentProject.title + ' - Imagen ' + (selectedImageIndex + 1)"
+                                     class="w-full h-64 sm:h-80 lg:h-96 object-cover rounded-xl border border-cyan-500/30 shadow-lg modal-image">
+                                
+                             
+                                <button @click="previousImage()" 
+                                        x-show="currentProject.images.length > 1"
+                                        class="absolute left-4 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-black/60 hover:bg-black/80 rounded-full flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-all duration-300">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                
+                                <button @click="nextImage()" 
+                                        x-show="currentProject.images.length > 1"
+                                        class="absolute right-4 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-black/60 hover:bg-black/80 rounded-full flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-all duration-300">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                                
+                        
+                                <div x-show="currentProject.images.length > 1" 
+                                     class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/60 px-3 py-1 rounded-full text-white text-sm">
+                                    <span x-text="selectedImageIndex + 1"></span> / <span x-text="currentProject.images.length"></span>
+                                </div>
+                            </div>
+                            
+                            <!-- Miniaturas -->
+                            <div x-show="currentProject.images.length > 1" 
+                                 class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-2">
+                                <template x-for="(image, index) in currentProject.images" :key="index">
+                                    <button @click="selectedImageIndex = index"
+                                            class="relative group overflow-hidden rounded-lg border-2 transition-all duration-300"
+                                            :class="selectedImageIndex === index ? 'border-cyan-400' : 'border-gray-600 hover:border-cyan-500'">
+                                        <img :src="image" 
+                                             :alt="currentProject.title + ' - Miniatura ' + (index + 1)"
+                                             class="w-full h-16 sm:h-20 object-cover">
+                                        <div x-show="selectedImageIndex === index" 
+                                             class="absolute inset-0 bg-cyan-400/20"></div>
+                                    </button>
+                                </template>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="space-y-6">
+                          
+                            <div class="bg-gray-900/50 rounded-xl p-4 border border-gray-700">
+                                <h3 class="text-lg font-bold text-cyan-400 mb-3 flex items-center">
+                                    <i class="fas fa-info-circle mr-2"></i>
+                                    Descripción
+                                </h3>
+                                <p class="text-gray-300 leading-relaxed" x-text="currentProject.fullDescription"></p>
+                            </div>
+                            
+                  
+                            <div class="bg-gray-900/50 rounded-xl p-4 border border-gray-700">
+                                <h3 class="text-lg font-bold text-cyan-400 mb-3 flex items-center">
+                                    <i class="fas fa-code mr-2"></i>
+                                    Tecnologías
+                                </h3>
+                                <div class="flex flex-wrap gap-2">
+                                    <template x-for="tech in currentProject.technologies" :key="tech.name">
+                                        <span class="px-3 py-1 rounded-full text-xs font-medium border"
+                                              :class="tech.class"
+                                              x-text="tech.name"></span>
+                                    </template>
+                                </div>
+                            </div>
+                            
+                            <!-- Características -->
+                            <div class="bg-gray-900/50 rounded-xl p-4 border border-gray-700">
+                                <h3 class="text-lg font-bold text-cyan-400 mb-3 flex items-center">
+                                    <i class="fas fa-star mr-2"></i>
+                                    Características
+                                </h3>
+                                <ul class="space-y-2">
+                                    <template x-for="feature in currentProject.features" :key="feature">
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check text-green-400 mt-1 mr-2 text-xs"></i>
+                                            <span class="text-gray-300 text-sm" x-text="feature"></span>
+                                        </li>
+                                    </template>
+                                </ul>
+                            </div>
+                            
+                         
+                            <div class="bg-gray-900/50 rounded-xl p-4 border border-gray-700">
+                                <h3 class="text-lg font-bold text-cyan-400 mb-3 flex items-center">
+                                    <i class="fas fa-calendar mr-2"></i>
+                                    Información
+                                </h3>
+                                <div class="space-y-2 text-sm">
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-400">Estado:</span>
+                                        <span class="font-medium" 
+                                              :class="currentProject.status === 'Activo' ? 'text-green-400' : 'text-blue-400'"
+                                              x-text="currentProject.status"></span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-400">Periodo:</span>
+                                        <span class="text-gray-300" x-text="currentProject.period"></span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-400">Tipo:</span>
+                                        <span class="text-gray-300" x-text="currentProject.type"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="py-12 sm:py-16 md:py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 md:mb-16 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                🏆 Certificaciones
+            </h2>
+            
+            <div class="max-w-2xl mx-auto">
+                <div class="bg-gradient-to-br from-yellow-900/30 to-orange-900/30 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-white/10">
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center mb-4 sm:mb-6">
+                        <div class="w-12 sm:w-16 h-12 sm:h-16 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mb-4 sm:mb-0 sm:mr-6 flex-shrink-0">
+                            <span class="text-xl sm:text-2xl">🏆</span>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-lg sm:text-xl font-bold text-yellow-400 mb-1">JavaScript: Desde cero con NodeJS</h3>
+                            <p class="text-orange-400 font-semibold text-sm sm:text-base">Udemy</p>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <p class="text-gray-300 mb-2 text-sm sm:text-base">
+                            <strong>Expedición:</strong> Feb. 2025 • <strong>Vencimiento:</strong> Jun. 2025
+                        </p>
+                        <p class="text-gray-400 text-xs sm:text-sm mb-4">
+                            ID: UC-623a666a-4147-47b8-9b92-df7ffa3f346f
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-yellow-500/20 text-yellow-400 rounded-full text-xs sm:text-sm border border-yellow-400/30">Node.js</span>
+                        <span class="px-3 py-1 bg-yellow-500/20 text-yellow-400 rounded-full text-xs sm:text-sm border border-yellow-400/30">JavaScript</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contacto" class="py-12 sm:py-16 md:py-20 px-4 bg-gray-900 relative">
+        <div class="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.05)_1px,transparent_1px)] bg-[size:100px_100px]"></div>
+        
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <div class="mb-8 sm:mb-12">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                    🤝 ¿Trabajamos Juntos?
+                </h2>
+                <p class="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed px-4">
+                    Estoy abierto a nuevas oportunidades, proyectos emocionantes y colaboraciones. 
+                    ¡Conectemos y creemos algo increíble juntos!
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-8 sm:mb-12">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=vivescriollojuandiego@gmail.com" target="_blank"
+                   class="group bg-black/80 backdrop-blur-sm p-4 sm:p-6 rounded-2xl border border-gray-800 hover:border-red-500/50 transition-all transform hover:scale-105 shadow-xl hover:shadow-red-500/20 flex flex-col items-center cursor-pointer">
+                    <div class="w-12 sm:w-16 h-12 sm:h-16 bg-gradient-to-r from-red-600 to-red-500 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fab fa-google text-white text-lg sm:text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-red-400 mb-2 text-sm sm:text-base">Gmail</h3>
+                    <p class="text-gray-400 text-xs sm:text-sm break-words mb-2">vivescriollojuandiego@gmail.com</p>
+                </a>
+                
+                <a href="https://www.linkedin.com/in/juan-diego-vives-criollo-245a98306" target="_blank"
+                   class="group bg-black/80 backdrop-blur-sm p-4 sm:p-6 rounded-2xl border border-gray-800 hover:border-blue-500/50 transition-all transform hover:scale-105 shadow-xl hover:shadow-blue-500/20">
+                    <div class="w-12 sm:w-16 h-12 sm:h-16 bg-gradient-to-r from-blue-600 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fab fa-linkedin-in text-white text-lg sm:text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-blue-400 mb-2 text-sm sm:text-base">LinkedIn</h3>
+                    <p class="text-gray-400 text-xs sm:text-sm">Perfil Profesional</p>
+                </a>
+                
+                <a href="https://github.com/JuanDiegoVivesCriollo" target="_blank"
+                   class="group bg-black/80 backdrop-blur-sm p-4 sm:p-6 rounded-2xl border border-gray-800 hover:border-gray-500/50 transition-all transform hover:scale-105 shadow-xl hover:shadow-gray-500/20">
+                    <div class="w-12 sm:w-16 h-12 sm:h-16 bg-gradient-to-r from-gray-700 to-gray-600 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fab fa-github text-white text-lg sm:text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-400 mb-2 text-sm sm:text-base">GitHub</h3>
+                    <p class="text-gray-400 text-xs sm:text-sm">Código & Proyectos</p>
+                </a>
+                
+                <a x-data="{ isMobile: /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) }"
+                   :href="isMobile ? 'whatsapp://send?phone=51947798160&text=Hola%20Juan%20Diego,%20vi%20tu%20portafolio%20y%20me%20interesa%20contactarte' : 'https://web.whatsapp.com/send?phone=51947798160&text=Hola%20Juan%20Diego,%20vi%20tu%20portafolio%20y%20me%20interesa%20contactarte'"
+                   class="group bg-black/80 backdrop-blur-sm p-4 sm:p-6 rounded-2xl border border-gray-800 hover:border-green-500/50 transition-all transform hover:scale-105 shadow-xl hover:shadow-green-500/20">
+                    <div class="w-12 sm:w-16 h-12 sm:h-16 bg-gradient-to-r from-green-600 to-green-500 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fab fa-whatsapp text-white text-lg sm:text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-green-400 mb-2 text-sm sm:text-base">WhatsApp</h3>
+                    <p class="text-gray-400 text-xs sm:text-sm">+51 947 798 160</p>
+                </a>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                
+                
+                <a x-data="{ isMobile: /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) }"
+                   :href="isMobile ? 'whatsapp://send?phone=51947798160&text=Hola%20Juan%20Diego,%20vi%20tu%20portafolio%20y%20me%20interesa%20contactarte' : 'https://web.whatsapp.com/send?phone=51947798160&text=Hola%20Juan%20Diego,%20vi%20tu%20portafolio%20y%20me%20interesa%20contactarte'"
+                   class="group relative px-6 sm:px-8 py-3 sm:py-4 border-2 border-green-400 rounded-full font-semibold text-green-400 hover:text-black hover:bg-green-400 transition-all duration-300 transform hover:scale-105">
+                    <span class="relative z-10 flex items-center justify-center text-sm sm:text-base">
+                        <i class="fab fa-whatsapp mr-2"></i>
+                        WhatsApp
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>    
+    <footer class="py-6 sm:py-8 px-4 border-t border-gray-800 bg-black">
+        <div class="max-w-6xl mx-auto text-center">
+            <p class="text-gray-400 mb-4 text-sm sm:text-base">
+                © 2025 Juan Diego Vives Criollo. Hecho con <span class="text-red-400">❤️</span> y mucho <span class="text-yellow-400">☕</span> en Lima, Perú.
+            </p>
+            <div class="flex justify-center space-x-4 sm:space-x-6">
+                <a href="mailto:vivescriollojuandiego@gmail.com" 
+                   class="text-gray-500 hover:text-red-400 transition-colors text-lg sm:text-xl"
+                   title="Enviar Email">
+                    <i class="fab fa-google"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/juan-diego-vives-criollo-245a98306" target="_blank" 
+                   class="text-gray-500 hover:text-blue-400 transition-colors text-lg sm:text-xl"
+                   title="Ver perfil en LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/JuanDiegoVivesCriollo" target="_blank" 
+                   class="text-gray-500 hover:text-gray-300 transition-colors text-lg sm:text-xl"
+                   title="Ver repositorios en GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/main.js"></script>
+
+</body>
+</html>
