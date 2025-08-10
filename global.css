@@ -23,29 +23,29 @@
             }
         }
         
-        /* Evitar scroll cuando el menú móvil está abierto */
+   
         .mobile-menu-open {
             overflow: hidden;
         }
         
-        /* Smooth scrolling mejorado */
+
         html {
             scroll-behavior: smooth;
         }
         
-        /* Transiciones para iconos del menú hamburguesa */
+   
         .hamburger-line {
             transform-origin: center;
         }
         
-        /* Mejoras de responsividad personalizada */
+      
         @media (max-width: 320px) {
             .text-xs-mobile {
                 font-size: 0.75rem;
             }
         }
         
-        /* Breakpoint extra pequeño para pantallas muy pequeñas */
+
         @media (min-width: 480px) {
             .xs\:grid-cols-2 {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -62,13 +62,13 @@
             display: none !important;
         }
         
-        /* Estilos para el modal */
+      
         .modal-backdrop {
             backdrop-filter: blur(8px);
             -webkit-backdrop-filter: blur(8px);
         }
         
-        /* Animación para las imágenes del modal */
+   
         .modal-image {
             transition: transform 0.3s ease, opacity 0.3s ease;
         }
@@ -77,7 +77,7 @@
             transform: scale(1.02);
         }
         
-        /* Scrollbar personalizado para el modal */
+
         .modal-content::-webkit-scrollbar {
             width: 6px;
         }
